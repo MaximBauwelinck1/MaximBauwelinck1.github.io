@@ -1,10 +1,13 @@
  /* Basic styling for the avbar */
- body {
+ #achtergrond {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url('../fotos/achtergrond1.jpg') no-repeat center center fixed;
-     background-size: cover;
-    
+    background: url('../fotos/achtergrond1.jpg') no-repeat center top;
+    background-size:cover;
+    background-attachment: scroll;
+     height: 100vh;
+   padding-bottom: 21em;
+     background-repeat: no-repeat; /* No tiling */
 }
 .navbar {
     display: flex;
@@ -13,6 +16,7 @@
     background-color: #333;
     padding: 10px;
 }
+
 .navbar a {
     color: white;
     text-decoration: none;
@@ -32,8 +36,12 @@
     color:aliceblue;
     text-align: center;
     font-size: 5em;
-    margin-bottom: 3em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+   padding-top: 5em;
     font-family: Playwrite New Zealand;
+
+    
 }
 
 .cat{
@@ -58,5 +66,24 @@
     text-decoration: none;
 }
 #eerste {
-    margin-left: 24em;
+    margin-left: 26em;
+}
+
+#laatste {
+   margin-block-end: 10em;
+}
+#test {
+    margin-top: 50em;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+#fotos{
+    
 }
