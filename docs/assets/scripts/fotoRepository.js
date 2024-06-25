@@ -1,26 +1,25 @@
-import foto from '.foto.js';
-import { boeken } from './boekenArray.js';
+import foto from './foto.js';
 
-export default class BoekenRepository {
-  #boeken = [];
+export default class fotoRepository {
+  #fotos = [];
   constructor() {
-    this.boekenVullen();
+    this.fotosVullen();
   }
 
-  get boeken() {
-    return this.#boeken;
+  get fotos() {
+    return this.#fotos;
   }
 
-  voegBoekToe(id, titel, afbeelding) {
-    this.#boeken.push(new Boek(id, titel, afbeelding));
+  voegFotoToe(naam,url) {
+    this.#fotos.push(new foto(naam,url));
   }
 
-  boekenVullen() {
-    boeken.forEach(([id, titel, afb]) => this.voegBoekToe(id, titel, afb));
+  fotosVullen() {
+    for (let index = 1; index < 31; index++) {
+          
+        this.#fotos.push(new foto(`motorsport${index}`,`../fotos/motorsport${index}.jpg`));
+    }
   }
 
-  // geefBoeken retourneert een deel van de boeken in #boeken
-  // parameter 'vanafBoek' is een nummer en geeft aan vanaf het hoeveelste boek (zero-based) we een deel nemen
-  // parameter 'aantalBoeken' is een nummer en geeft aan hoeveel opeenvolgende boeken we in het deel stoppen
-  geefBoeken(vanafBoek, aantalBoeken) {}
+
 }
