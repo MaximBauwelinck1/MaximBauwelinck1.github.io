@@ -1,0 +1,62 @@
+ /* Basic styling for the navbar */
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('/fotos/_MG_1110.jpg') no-repeat center center fixed;
+     background-size: cover;
+    
+}
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+}
+.navbar a:hover {
+    background-color: #575757;
+}
+.navbar img {
+    height: 20px;
+    margin-right: 8px;
+}
+
+#titel {
+    color:aliceblue;
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: 3em;
+    font-family: Playwrite New Zealand;
+}
+
+.cat{
+    color:aliceblue;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: Playwrite New Zealand;
+}
+
+.cattext {
+    color:aliceblue;
+    font-size: 1.5em;
+    font-family: Playwrite New Zealand;
+    text-decoration: none;
+    margin-left: 1em;
+}
+
+.navbartext {
+    color:aliceblue;
+    font-size: 1.5em;
+    font-family: Playwrite New Zealand;
+    text-decoration: none;
+}
+#eerste {
+    margin-left: 24em;
+}
