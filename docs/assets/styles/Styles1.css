@@ -2,7 +2,7 @@
  body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: url('github.com/MaximBauwelinck1/MaximBauwelinck1.github.io/blob/main/docs/assets/_MG_1110.jpg') no-repeat center center fixed;
+    background: url('/github.com/MaximBauwelinck1/MaximBauwelinck1.github.io/blob/main/docs/assets/_MG_1110.jpg') no-repeat center center fixed;
      background-size: cover;
     
 }
