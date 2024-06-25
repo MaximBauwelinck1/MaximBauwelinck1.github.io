@@ -16,7 +16,9 @@ export default class fotoComponent {
    const div = document.getElementById("fotos");
 
    this.#fotoRepository.fotos.forEach(f => {
-    //code vr nieuwe foto toe voegen
+    const nieuwediv = document.createElement('img')
+    nieuwediv.src = f.url;
+    div.appendChild(nieuwediv);
    });
   }
 
