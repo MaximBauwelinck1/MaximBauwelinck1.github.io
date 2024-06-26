@@ -83,7 +83,60 @@ body, html {
     height: 100%;
     
 }
+/* voor fotos 3 naast elkaar te plaatsen
+#fotos {
+    padding-top: 12em;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; /* Distribute items evenly with space in between */
+   /* max-width: 1000px; /* Optional: Set maximum width for container 
+    margin: 0 auto; 
+    justify-content: space-between;
+    padding-left: 14em;
+    padding-right: 14em;
+}
 
-#fotos{
-    
+#fotos img {
+    width: calc(33.33% - 10px); 
+    margin-right: 10px; 
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#fotos img:last-child {
+    margin-right: 0; 
+}
+*/
+
+
+#fotos {
+    padding-top: 12em;
+    position: relative; /* Ensure images are positioned relative to this container */
+    width: 100%; /* Adjust width as needed */
+    height: 100vh; /* Adjust height as needed */
+    overflow: auto; /* Enable scrolling within the container */
+}
+
+#fotos img {
+   margin-top: 30px;
+   margin-left: 30px;
+   margin-right: 30px;
+    max-width: 100%; /* Ensure images do not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+    opacity: 0.8; /* Adjust opacity as desired for layering effect */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+#fotos img:last-child {
+    margin-right: 0; 
+}
+
+#fotos img:hover {
+    opacity: 2; /* Increase opacity on hover for emphasis */
+}
+
+
+#grijs {
+    background-color: #575757;
 }
