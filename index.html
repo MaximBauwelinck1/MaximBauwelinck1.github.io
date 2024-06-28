@@ -30,6 +30,10 @@
 		<h1 id="titel">fotodvh</h1>	
 	</div>
 	<div id="grijs">
+		<div class="lightbox" id="lightbox">
+			<span class="close-button" onclick="closeLightbox()">&times;</span>
+			<img id="lightbox-image" src="" alt="Enlarged Image">
+		</div>
 		<div id="fotos">
 
 		</div>
@@ -43,5 +47,16 @@
 
 	</footer>
 </body>
+<script>
+	function openLightbox(imageUrl) {
+  document.getElementById('lightbox-image').src = imageUrl;
+  document.getElementById('lightbox').style.display = 'block';
+}
+
+// JavaScript to close the lightbox
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+</script>
 <script  src="docs/assets/scripts/index.js" type="module"></script>
 </html>

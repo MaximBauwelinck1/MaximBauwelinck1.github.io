@@ -17,7 +17,7 @@ export default class fotoRepository {
   fotosVullen() {
     for (let index = 1; index < 31; index++) {
           
-        this.#fotos.push(new foto(`motorsport${index}`,`/docs/assets/fotos/motorsport${index}.jpg`));
+        this.#fotos.push(new foto(`jpeg-optimizer_motorsport${index}`,`/docs/assets/fotos/jpeg-optimizer_motorsport${index}.jpg`));
     }
   }
 

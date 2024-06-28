@@ -20,6 +20,10 @@ export default class fotoComponent {
    const img = document.createElement('img');
     img.src = f.url;
     img.loading = "lazy"; 
+    img.onclick = () =>{
+      document.getElementById('lightbox-image').src = f.url;
+      document.getElementById('lightbox').style.display = 'block';
+    };
     div.appendChild(img);
    // const test = document.createElement('div');
     
@@ -31,6 +35,16 @@ export default class fotoComponent {
   }
 
 
+}
+
+function openLightbox(imageUrl) {
+  document.getElementById('lightbox-image').src = imageUrl;
+  document.getElementById('lightbox').style.display = 'block';
+}
+
+// JavaScript to close the lightbox
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
 }
 
 // Lazy load function using Intersection Observer
@@ -49,6 +63,7 @@ function observeImages() {
   });
 
   lazyImages.forEach(img => observer.observe(img));
+  scrollToTop();
 }
 
 // Scroll to the top of the page
@@ -62,3 +77,5 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollToTop(); // Ensure scroll to top on initial load
 });
 
+window.addEventListener('load', scrollToTop);
+window.addEventListener('beforeunload', scrollToTop); // For older browsers
