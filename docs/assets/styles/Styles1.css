@@ -44,6 +44,22 @@
     
 }
 
+#tussentitel{
+    text-align: center;
+    font-size: 5em;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+   padding-top: 1em;
+    font-family: Playwrite New Zealand;
+    text-decoration: underline;
+}
+
+#note {
+    position:absolute ;
+    right: 3em;
+    top: 10em;
+}
+
 .cat{
     color:aliceblue;
     text-align: center;
@@ -86,6 +102,7 @@ body, html {
 /* voor fotos 3 naast elkaar te plaatsen*/
 
 #fotos {
+    position: relative;
     padding-top: 12em;
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap onto new lines */
@@ -94,18 +111,19 @@ body, html {
     margin: 0 auto; /* Center align container */
     padding-left: 50px;
     padding-right: 50px;
+    padding-bottom: 22em;
    
 }
 
 #fotos img {
     width: calc(33.33% - 10px); /* 33.33% width minus space in between */
     margin-bottom: 30px; /* Space between rows */
-   
-   
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.6); /* Optional: Add shadow around the image */
+    transition: transform 0.5s ease;
 }
 
 #fotos img:last-child {
-    margin-right: 0; 
+    margin-bottom: 0em; 
    
 }
 
