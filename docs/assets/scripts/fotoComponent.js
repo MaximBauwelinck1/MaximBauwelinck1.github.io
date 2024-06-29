@@ -20,6 +20,7 @@ export default class fotoComponent {
    const img = document.createElement('img');
     img.src = f.url;
     img.loading = "lazy"; 
+    img.className = "tag"
     img.onclick = () =>{
       document.getElementById('lightbox-image').src = f.url;
       document.getElementById('lightbox').style.display = 'block';
@@ -37,15 +38,6 @@ export default class fotoComponent {
 
 }
 
-function openLightbox(imageUrl) {
-  document.getElementById('lightbox-image').src = imageUrl;
-  document.getElementById('lightbox').style.display = 'block';
-}
-
-// JavaScript to close the lightbox
-function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
-}
 
 // Lazy load function using Intersection Observer
 function observeImages() {
@@ -79,3 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', scrollToTop);
 window.addEventListener('beforeunload', scrollToTop); // For older browsers
+
+
+  // Ensure jQuery is ready before executing jQuery code
+  $(document).ready(function() {
+    $(document).on("scroll", function() {
+        var pageTop = $(document).scrollTop();
+        var pageBottom = pageTop + $(window).height();
+
+        $(".tag").each(function() {
+            var tagTop = $(this).offset().top; // Use offset().top for accurate position
+
+            if (tagTop < pageBottom) {
+                $(this).addClass("visible");
+            } else {
+                $(this).removeClass("visible");
+            }
+        });
+    });
+
+    // Trigger scroll event on page load to initially check visibility
+    $(document).scroll();
+});

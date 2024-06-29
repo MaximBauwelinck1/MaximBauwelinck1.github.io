@@ -120,6 +120,7 @@ body, html {
     margin-bottom: 30px; /* Space between rows */
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.6); /* Optional: Add shadow around the image */
     transition: transform 0.5s ease;
+
 }
 
 #fotos img:last-child {
@@ -201,3 +202,16 @@ body, html {
     font-size: 24px;
     z-index: 10000; /* Ensure the close button is above other content */
 }
+
+
+
+.tag {
+    opacity: 0;
+    transform: translate(0, 10vh);
+    transition: all 1s;
+  }
+  
+  .tag.visible {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
